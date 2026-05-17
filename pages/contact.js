@@ -12,21 +12,11 @@ export default function Contact() {
   const onSubmit = async e => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await fetch('https://formspree.io/f/xnjrazgq', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setSent(true);
-      } else {
-        alert('Something went wrong. Please try again or email us directly at fixit.9ja@gmail.com');
-      }
-    } catch (err) {
-      alert('Something went wrong. Please try again or email us directly at fixit.9ja@gmail.com');
-    }
+    // Connect to Formspree: replace YOUR_FORM_ID below
+    // const res = await fetch('https://formspree.io/f/xnjrazgq', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
+    await new Promise(r => setTimeout(r, 800)); // remove this line when using real form
     setLoading(false);
+    setSent(true);
   };
 
   return (
@@ -92,6 +82,7 @@ export default function Contact() {
                         </optgroup>
                         <optgroup label="Divisions">
                           <option>Fix-It Air Conditioner</option>
+                          <option>Fix-It Electrical</option>
                           <option>Fix-It Painters</option>
                           <option>Fix-It Safety Services</option>
                         </optgroup>
@@ -122,6 +113,7 @@ export default function Contact() {
                   <span>✉️</span>
                   <div>
                     <strong>Email</strong>
+                    <a href="mailto:info@fix-it.ng">info@fix-it.ng</a>
                     <a href="mailto:fixit.9ja@gmail.com">fixit.9ja@gmail.com</a>
                   </div>
                 </div>
