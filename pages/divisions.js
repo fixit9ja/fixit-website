@@ -9,7 +9,7 @@ const DIVS = [
     tag: 'A Division of Fix-It Handyman Limited',
     logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png',
     color: 'var(--cyan)',
-    desc: 'We supply, install, maintain, and repair air conditioning systems across the full spectrum — from residential split units to large commercial and industrial HVAC installations. Our certified technicians ensure your systems run efficiently, reliably, and within manufacturer specifications year-round.',
+    desc: 'We supply, install, maintain, and repair air conditioning systems across the full spectrum, from residential split units to large commercial and industrial HVAC installations. Our certified technicians ensure your systems run efficiently, reliably, and within manufacturer specifications year-round.',
     items: [
       'Supply of split unit, cassette, ducted, and commercial AC systems',
       'Professional installation for homes, offices, and commercial spaces',
@@ -43,7 +43,7 @@ const DIVS = [
     tag: 'A Division of Fix-It Handyman Limited',
     logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIRE_SAFETY_LOGO_2_fet0a9.png',
     color: 'var(--royal)',
-    desc: "We specialise in the inspection, servicing, refilling, and certification of fire extinguishers and fire safety equipment for homes, offices, factories, and public facilities. Keeping your fire safety equipment in full working order is not just good practice — it's the law, and we make compliance simple.",
+    desc: "We specialise in the inspection, servicing, refilling, and certification of fire extinguishers and fire safety equipment for homes, offices, factories, and public facilities. Keeping your fire safety equipment in full working order is not just good practice. It is the law, and we make compliance simple.",
     items: [
       'Fire extinguisher inspection and certification',
       'Refilling and recharging of all extinguisher types (CO₂, dry powder, foam, water)',
@@ -68,11 +68,11 @@ export default function Divisions() {
         <div className={`container ${s.heroContent}`}>
           <p className="eyebrow">Specialised Arms</p>
           <h1>Our Divisions</h1>
-          <p>Focused service companies operating under the Fix-It Handyman Limited umbrella — each built to deliver specialist expertise.</p>
+          <p>Focused service companies operating under the Fix-It Handyman Limited umbrella, each built to deliver specialist expertise.</p>
         </div>
       </section>
 
-      {/* Overview cards — logo images instead of emoji */}
+      {/* Overview cards */}
       <section className={s.overview}>
         <div className="container">
           <div className={s.overGrid}>
@@ -88,7 +88,7 @@ export default function Divisions() {
         </div>
       </section>
 
-      {/* Division detail blocks — logo on left, services on right */}
+      {/* Division detail blocks */}
       {DIVS.map((d, i) => (
         <section key={d.id} id={d.id} className={`${s.divBlock} ${i%2===1?s.divBlockAlt:''}`}>
           <div className="container">
@@ -118,7 +118,7 @@ export default function Divisions() {
       <section className={s.cta}>
         <div className="container">
           <h2>All Divisions. One Company.</h2>
-          <p>Whether you need AC servicing, a fresh coat of paint, or fire safety compliance — we have a dedicated team ready.</p>
+          <p>Whether you need AC servicing, a fresh coat of paint, or fire safety compliance. We have a dedicated team ready.</p>
           <Link href="/contact" className="btn btn-red" style={{marginTop:28}}>Contact Us Today</Link>
         </div>
       </section>

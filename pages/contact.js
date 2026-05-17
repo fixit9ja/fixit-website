@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <Layout title="Contact" description="Contact Fix-It Handyman Limited — Abuja and Lagos offices. Engineering, construction, and technical services across Nigeria.">
+    <Layout title="Contact" description="Contact Fix-It Handyman Limited, Abuja and Lagos offices. Engineering, construction, and technical services across Nigeria.">
 
       <section className={s.hero}>
         <div className={s.heroBg}>
@@ -47,7 +47,7 @@ export default function Contact() {
                   <span>✅</span>
                   <div>
                     <strong>Message Received!</strong>
-                    <p>Thank you — we'll be in touch within one business day.</p>
+                    <p>Thank you, we will be in touch within one business day.</p>
                   </div>
                 </div>
               ) : (
@@ -127,7 +127,7 @@ export default function Contact() {
                 <div className={s.office}>
                   <span>🏢</span>
                   <div>
-                    <strong>Head Office — Abuja</strong>
+                    <strong>Head Office, Abuja</strong>
                     <span>Suite B-005, Quad Plaza, Ameh Ebute St, Wuye District, Abuja-FCT</span>
                   </div>
                 </div>

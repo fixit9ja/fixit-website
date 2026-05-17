@@ -26,7 +26,7 @@ const DEPT_COLOR = { Leadership:'var(--red)', Engineering:'var(--cyan)', Technol
 
 export default function About() {
   return (
-    <Layout title="About Us" description="Learn about Fix-It Handyman Limited — Nigeria's trusted multi-disciplinary engineering company since 2017.">
+    <Layout title="About Us" description="Learn about Fix-It Handyman Limited, Nigeria's trusted multi-disciplinary engineering company since 2017.">
 
       {/* HERO */}
       <section className={s.hero}>
@@ -49,7 +49,7 @@ export default function About() {
               <p className="eyebrow">Our Story</p>
               <h2 className="section-title">From Abuja.<br /><span>To The Nation.</span></h2>
               <p>Fix-It Handyman Limited was incorporated in Nigeria in January 2017 with a clear purpose: to provide reliable, high-quality technical services to businesses, government agencies, and individuals across Nigeria.</p>
-              <p>What began as a focused handyman and maintenance business has evolved into a multi-disciplinary company with seven service divisions — spanning engineering contracting, hydrographic equipment services, marine survey support, medical facility construction, IT infrastructure, and advanced technical procurement.</p>
+              <p>What began as a focused handyman and maintenance business has evolved into a multi-disciplinary company with seven service divisions, spanning engineering contracting, hydrographic equipment services, marine survey support, medical facility construction, IT infrastructure, and advanced technical procurement.</p>
               <p>Today, we operate from our head office in Abuja (FCT) and a regional office in Lagos, serving clients across both the public and private sectors.</p>
             </div>
             <div className={s.storyImgs}>
@@ -67,12 +67,12 @@ export default function About() {
             <div className={s.mvCard} style={{borderTopColor:'var(--red)'}}>
               <div className={s.mvNum}>01</div>
               <h3>Mission</h3>
-              <p>To deliver reliable, high-quality, and innovative technical solutions across engineering, construction, maintenance, hydrographic services, and procurement — exceeding client expectations through professionalism, precision, and integrity.</p>
+              <p>To deliver reliable, high-quality, and innovative technical solutions across engineering, construction, maintenance, hydrographic services, and procurement, exceeding client expectations through professionalism, precision, and integrity.</p>
             </div>
             <div className={s.mvCard} style={{borderTopColor:'var(--cyan)'}}>
               <div className={s.mvNum}>02</div>
               <h3>Vision</h3>
-              <p>To be the foremost multi-disciplinary engineering and technical services company in West Africa — renowned for innovation, reliability, and sustainable solutions that empower communities and industries.</p>
+              <p>To be the foremost multi-disciplinary engineering and technical services company in West Africa, renowned for innovation, reliability, and sustainable solutions that empower communities and industries.</p>
             </div>
             <div className={s.mvCard} style={{borderTopColor:'var(--royal)'}}>
               <div className={s.mvNum}>03</div>

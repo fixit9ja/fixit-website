@@ -6,7 +6,7 @@ const LOGO = 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778979476/FIX-
 
 export default function Layout({ children, title = '', description = '' }) {
   const t = title ? `${title} | Fix-It Handyman Limited` : 'Fix-It Handyman Limited | Engineering & Technical Services Nigeria';
-  const d = description || "Fix-It Handyman Limited — Nigeria's multi-disciplinary engineering, construction, hydrographic, and technical services company since 2017.";
+  const d = description || "Fix-It Handyman Limited, Nigeria's multi-disciplinary engineering, construction, hydrographic, and technical services company since 2017.";
   return (
     <>
       <Head>

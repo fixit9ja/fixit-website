@@ -20,7 +20,7 @@ const SERVICES = [
 ];
 
 const DIVISIONS = [
-  { name: 'Fix-It Air Conditioner', desc: 'Supply, maintenance & repair of AC units — from split systems to commercial installations.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png', anchor: 'aircon' },
+  { name: 'Fix-It Air Conditioner', desc: 'Supply, maintenance & repair of AC units, from split systems to commercial installations,', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png', anchor: 'aircon' },
   { name: 'Fix-It Painters',        desc: 'Professional painting of residential, commercial, and industrial buildings.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIX_IT_PAINTERS_LOGO_jgjyqc.png', anchor: 'painters' },
   { name: 'Fix-It Safety Services', desc: 'Inspection, servicing, and certification of fire extinguishers and safety equipment.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIRE_SAFETY_LOGO_2_fet0a9.png', anchor: 'safety' },
 ];
@@ -28,7 +28,7 @@ const DIVISIONS = [
 const WHY = [
   { icon: '🔰', t: 'Fully Registered', d: 'CAC, FIRS, NEMSA, ITF, NSITF, BPP and SCUML compliant.' },
   { icon: '🤝', t: 'OEM Partnerships', d: 'Authorised reps for Kongsberg, Teledyne, Trimble, Emerson and more.' },
-  { icon: '⚙️', t: 'End-to-End Delivery', d: 'From planning through after-sales — we own the full lifecycle.' },
+  { icon: '⚙️', t: 'End-to-End Delivery', d: 'From planning through after-sales, we own the full lifecycle.' },
   { icon: '🏆', t: 'Proven Track Record', d: 'Public & private sector clients across oil & gas, healthcare, and government.' },
 ];
 
@@ -51,11 +51,11 @@ export default function Home() {
             <span>Multi-Disciplinary</span><br />
             Technical Partner
           </h1>
-          <p className={s.heroP}>Engineering, construction, hydrographic services, maintenance, IT infrastructure, and equipment procurement — all under one roof.</p>
+          <p className={s.heroP}>Engineering, construction, hydrographic services, maintenance, IT infrastructure, and equipment procurement, all under one roof.</p>
           <Link href="/services" className="btn btn-red">Explore Services →</Link>
         </div>
 
-        {/* Mascot — floating right side of hero */}
+        {/* Mascot floating right side of hero */}
         <div className={s.mascotWrap}>
           <img
             src="https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIXIT_NEW_mascot_nf3bdw.png"
@@ -94,7 +94,7 @@ export default function Home() {
               <p className="eyebrow">Who We Are</p>
               <h2 className="section-title">Built on Expertise.<br /><span>Driven by Results.</span></h2>
               <p className="section-sub">Fix-It Handyman Limited is a multi-disciplinary Nigerian company delivering high-quality, cost-effective technical solutions to public and private sector clients across the country.</p>
-              <p className="section-sub" style={{marginTop:14}}>Our certified engineers, technicians, and project managers bring international standards to every engagement — from small repairs to large-scale infrastructure projects.</p>
+              <p className="section-sub" style={{marginTop:14}}>Our certified engineers, technicians, and project managers bring international standards to every engagement, from small repairs to large-scale infrastructure projects.</p>
               <div className={s.certRow}>
                 {['CAC Registered','Tax Compliant','NEMSA Licensed','BPP Certified'].map(c=>(
                   <span key={c} className={s.cert}>{c}</span>
@@ -196,7 +196,7 @@ export default function Home() {
             />
             <div className={s.mascotBandText}>
               <h2>Ready to Fix It?</h2>
-              <p>Whatever the project — big or small — our team is ready to deliver. Get in touch today for a free consultation and quote.</p>
+              <p>Whatever the project, big or small, our team is ready to deliver. Get in touch today for a free consultation and quote.</p>
               <Link href="/contact" className="btn btn-red">Contact Us →</Link>
             </div>
           </div>
