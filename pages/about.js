@@ -4,11 +4,17 @@ import s from './about.module.css';
 
 const TEAM = [
   { name: 'Ifeanyi G. Okeke',              role: 'Chief Executive Officer / MD',           dept: 'Leadership' },
-  { name: 'Engr. Chukwuebuka E. Okeke',   role: 'Partner / Electrical & Electronics Engr', dept: 'Engineering' },
-  { name: 'Engr. Amachree Sule',           role: 'Senior Electrical Engineer',              dept: 'Engineering' },
-  { name: 'Engr. Magnus Hwosafe',          role: 'Lead Civil & Structural Engineer',        dept: 'Engineering' },
-  { name: 'Oluwafemi Adeola',              role: 'Lead, ICT Department',                    dept: 'Technology' },
-  { name: 'Martins Abu',                   role: 'Senior HVAC & Air Conditioning Specialist',dept: 'Operations' },
+  { name: 'Okoli Chinenye Peace',              role: 'Chief Operating Officer',           dept: 'Leadership' },
+  { name: 'Paul N. Ilanghom',              role: 'Human Resoure Manager',           dept: 'Leadership' },
+  { name: 'Nzube Dominic Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
+  { name: 'Engr. Chukwuebuka E. Okeke',   role: 'Electrical & Electronics Engr', dept: 'Engineering' },
+  { name: 'Engr. Sunday Sule',           role: 'Mechincal Engineer',              dept: 'Engineering' },
+  { name: 'Engr. Magnus Hwosafe',          role: 'Civil & Structural Engineer',        dept: 'Engineering' },
+  { name: 'Oluwafemi Adeola',              role: 'ICT Department',                    dept: 'Technology' },
+  { name: 'Martins Abu',                   role: 'HVAC & Air Conditioning Specialist (Nationawide)',dept: 'Operations' },
+  { name: 'Abubakar D. Ismaila',                   role: 'HVAC & Air Conditioning Specialist (Abuja)',dept: 'Operations' },
+  { name: 'Jamiu O. Akanni',                   role: 'HVAC & Air Conditioning Specialist (Lagos)',dept: 'Operations' },
+  { name: 'Kenneth I. Ternenge',                   role: 'Head Painting Department',dept: 'Operations' },
 ];
 
 const COMPLIANCE = [
