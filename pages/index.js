@@ -220,18 +220,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PARTNERS */}
-      <section className={s.partnerSect}>
-        <div className="container">
-          <p className={s.partnerLabel}>Trusted OEM Partners and Associations</p>
-          <div className={s.partnerRow}>
-            {['Kongsberg', 'Teledyne', 'Trimble', 'Emerson', 'Fouani Group', 'Honeywell', '2M Kablo', 'COREN'].map(p => (
-              <div key={p} className={s.partnerTag}>{p}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
     </Layout>
   );
 }
