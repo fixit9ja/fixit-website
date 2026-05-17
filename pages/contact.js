@@ -12,11 +12,21 @@ export default function Contact() {
   const onSubmit = async e => {
     e.preventDefault();
     setLoading(true);
-    // Connect to Formspree: replace YOUR_FORM_ID below
-    // const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
-    await new Promise(r => setTimeout(r, 800)); // remove this line when using real form
+    try {
+      const res = await fetch('https://formspree.io/f/xnjrazgq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        alert('Something went wrong. Please try again or email us directly at fixit.9ja@gmail.com');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please try again or email us directly at fixit.9ja@gmail.com');
+    }
     setLoading(false);
-    setSent(true);
   };
 
   return (
