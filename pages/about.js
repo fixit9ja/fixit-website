@@ -6,10 +6,10 @@ const TEAM = [
   { name: 'Ifeanyi G. Okeke',              role: 'Chief Executive Officer / MD',           dept: 'Leadership' },
   { name: 'Okoli Chinenye Peace',              role: 'Chief Operating Officer',           dept: 'Leadership' },
   { name: 'Paul N. Ilanghom',              role: 'Human Resoure Manager',           dept: 'Leadership' },
-  { name: 'Nzube Dominic Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
   { name: 'Engr. Chukwuebuka E. Okeke',   role: 'Electrical & Electronics Engr', dept: 'Engineering' },
   { name: 'Engr. Sunday Sule',           role: 'Mechincal Engineer',              dept: 'Engineering' },
   { name: 'Engr. Magnus Hwosafe',          role: 'Civil & Structural Engineer',        dept: 'Engineering' },
+ { name: 'Nzube Dominic Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
   { name: 'Oluwafemi Adeola',              role: 'ICT Department',                    dept: 'Technology' },
   { name: 'Martins Abu',                   role: 'HVAC & Air Conditioning Specialist (Nationawide)',dept: 'Operations' },
   { name: 'Abubakar D. Ismaila',                   role: 'HVAC & Air Conditioning Specialist (Abuja)',dept: 'Operations' },
@@ -60,7 +60,7 @@ export default function About() {
             </div>
             <div className={s.storyImgs}>
               <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction" className={s.img1} />
-              <img src="https://res.cloudinary.com/dbjahorp6/image/upload/v1779013259/IMG_2331_wkgvsl.jpg" alt="Marine" className={s.img2} />
+              <img src="https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIXIT_NEW_mascot_nf3bdw.png" alt="Marine" className={s.img2} />
             </div>
           </div>
         </div>
