@@ -6,12 +6,13 @@ import s from './Navbar.module.css';
 const LOGO = 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778979476/FIX-IT_HANYMAN_u0w1ko.png';
 
 const LINKS = [
-  { href: '/',         label: 'Home' },
-  { href: '/about',    label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/divisions',label: 'Divisions' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact',  label: 'Contact' },
+  { href: '/',          label: 'Home' },
+  { href: '/about',     label: 'About' },
+  { href: '/services',  label: 'Services' },
+  { href: '/divisions', label: 'Divisions' },
+  { href: '/clients',   label: 'Clients' },
+  { href: '/projects',  label: 'Projects' },
+  { href: '/contact',   label: 'Contact' },
 ];
 
 export default function Navbar() {
