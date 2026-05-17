@@ -11,12 +11,12 @@ const STATS = [
 
 const SERVICES = [
   { icon: '🏗', label: 'Engineering &\nContracting',  anchor: 'engineering',  img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80' },
-  { icon: '🌊', label: 'Hydrographic\nEquipment',    anchor: 'hydrographic', img: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80' },
-  { icon: '⚓', label: 'Marine Survey\nSupport',      anchor: 'marine',       img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80' },
-  { icon: '🔧', label: 'Handyman &\nMaintenance',    anchor: 'handyman',     img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80' },
+  { icon: '🔧', label: 'Handyman &\nMaintenance',    anchor: 'handyman',     img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779026547/WhatsApp_Image_2026-05-17_at_11.35.36_AM_g9aush.jpg' },
+  { icon: '🌊', label: 'Hydrographic\nEquipment',    anchor: 'hydrographic', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779026884/land-survey-3-1024x682_mjhjwl.jpg' },
   { icon: '🏥', label: 'Medical\nFacilities',        anchor: 'medical',      img: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80' },
   { icon: '💻', label: 'IT\nInfrastructure',         anchor: 'it',           img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80' },
-  { icon: '📦', label: 'Equipment\nProcurement',     anchor: 'procurement',  img: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80' },
+  { icon: '⚓', label: 'Marine Survey\nSupport',      anchor: 'marine',       img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80' },
+  { icon: '📦', label: 'Equipment\nProcurement',     anchor: 'procurement',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779026548/WhatsApp_Image_2026-05-17_at_11.35.27_AM_1_kwv6yg.jpg' },
 ];
 
 const DIVISIONS = [
@@ -217,18 +217,6 @@ export default function Home() {
               </p>
               <Link href="/contact" className="btn btn-red">Contact Us</Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PARTNERS */}
-      <section className={s.partnerSect}>
-        <div className="container">
-          <p className={s.partnerLabel}>Trusted OEM Partners and Associations</p>
-          <div className={s.partnerRow}>
-            {['Kongsberg', 'Teledyne', 'Trimble', 'Emerson', 'Fouani Group', 'Honeywell', '2M Kablo', 'COREN'].map(p => (
-              <div key={p} className={s.partnerTag}>{p}</div>
-            ))}
           </div>
         </div>
       </section>
