@@ -9,7 +9,7 @@ const TEAM = [
   { name: 'Engr. Chukwuebuka Okeke',   role: 'Electrical & Electronics Engr', dept: 'Engineering' },
   { name: 'Engr. Sunday Sule',           role: 'Mechanical Engineer',              dept: 'Engineering' },
   { name: 'Engr. Magnus Hwosafe',          role: 'Civil & Structural Engineer',        dept: 'Engineering' },
- { name: 'Nzube Dominic Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
+ { name: 'Nzube D. Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
   { name: 'Oluwafemi Adeola',              role: 'ICT Department',                    dept: 'Technology' },
   { name: 'Martins Abu',                   role: 'HVAC & Air Conditioning Specialist (Nationwide)',dept: 'Operations' },
   { name: 'Abubakar D. Ismaila',                   role: 'HVAC & Air Conditioning Specialist (Abuja)',dept: 'Operations' },
