@@ -37,7 +37,7 @@ export default function About() {
       {/* HERO */}
       <section className={s.hero}>
         <div className={s.heroBg}>
-          <img src="https://images.unsplash.com/photo-1521791055366-0d553381ad47?w=1600&q=80" alt="" />
+          <img src="https://res.cloudinary.com/dbjahorp6/image/upload/v1779026547/WhatsApp_Image_2026-05-17_at_11.35.51_AM_2_sp6jp0.jpg" alt="" />
           <div className={s.heroMask} />
         </div>
         <div className={`container ${s.heroContent}`}>
