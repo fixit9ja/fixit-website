@@ -20,9 +20,9 @@ const SERVICES = [
 ];
 
 const DIVISIONS = [
-  { name: 'Fix-It Air Conditioner', desc: 'Supply, maintenance & repair of AC units — from split systems to commercial installations.', icon: '❄️', anchor: 'aircon' },
-  { name: 'Fix-It Painters',        desc: 'Professional painting of residential, commercial, and industrial buildings.', icon: '🎨', anchor: 'painters' },
-  { name: 'Fix-It Safety Services', desc: 'Inspection, servicing, and certification of fire extinguishers and safety equipment.', icon: '🔥', anchor: 'safety' },
+  { name: 'Fix-It Air Conditioner', desc: 'Supply, maintenance & repair of AC units — from split systems to commercial installations.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png', anchor: 'aircon' },
+  { name: 'Fix-It Painters',        desc: 'Professional painting of residential, commercial, and industrial buildings.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIX_IT_PAINTERS_LOGO_jgjyqc.png', anchor: 'painters' },
+  { name: 'Fix-It Safety Services', desc: 'Inspection, servicing, and certification of fire extinguishers and safety equipment.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIRE_SAFETY_LOGO_2_fet0a9.png', anchor: 'safety' },
 ];
 
 const WHY = [
@@ -146,7 +146,9 @@ export default function Home() {
           <div className={s.divGrid}>
             {DIVISIONS.map(d => (
               <Link href={`/divisions#${d.anchor}`} key={d.name} className={s.divCard}>
-                <span className={s.divIcon}>{d.icon}</span>
+                <div className={s.divLogoBox}>
+                  <img src={d.logo} alt={d.name} className={s.divLogoImg} />
+                </div>
                 <h3>{d.name}</h3>
                 <p>{d.desc}</p>
                 <span className={s.divLink}>Learn more →</span>

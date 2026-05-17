@@ -186,7 +186,24 @@
   border-top:3px solid var(--red);
 }
 .divCard:hover { background:rgba(255,255,255,0.08); border-top-color:var(--cyan); transform:translateY(-4px); box-shadow:var(--sh-lg); }
-.divIcon { font-size:2.4rem; }
+
+/* White logo box inside the dark division card */
+.divLogoBox {
+  width:100%;
+  height:110px;
+  background:var(--white);
+  border-radius:var(--r-sm);
+  display:flex; align-items:center; justify-content:center;
+  padding:14px 20px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.15);
+  transition:transform 0.3s;
+}
+.divCard:hover .divLogoBox { transform:scale(1.03); }
+.divLogoImg {
+  max-width:100%; max-height:82px;
+  object-fit:contain;
+}
+
 .divCard h3 { font-family:var(--font-head); font-size:1.4rem; font-weight:800; text-transform:uppercase; color:var(--white); }
 .divCard p { font-size:0.9rem; color:rgba(255,255,255,0.55); line-height:1.65; flex:1; }
 .divLink { font-family:var(--font-head); font-size:0.88rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--cyan); transition:gap 0.2s; }
