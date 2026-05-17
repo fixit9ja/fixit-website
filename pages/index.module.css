@@ -53,6 +53,64 @@
 }
 .statsRow { display:grid; grid-template-columns:repeat(4,1fr); }
 .stat { padding:22px 28px; text-align:center; border-right:1px solid rgba(255,255,255,0.06); }
+
+/* Mascot floating in hero */
+.mascotWrap {
+  position:absolute;
+  right:5%;
+  bottom:80px; /* sits just above the stats strip */
+  z-index:4;
+  pointer-events:none;
+}
+.mascot {
+  height:clamp(220px, 28vw, 420px);
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 32px rgba(0,0,0,0.5));
+  animation:mascotFloat 4s ease-in-out infinite;
+}
+@keyframes mascotFloat {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(-14px); }
+}
+
+/* Mascot CTA band */
+.mascotBand {
+  background:linear-gradient(110deg, var(--dark) 0%, var(--navy) 100%);
+  border-top:3px solid var(--red);
+  border-bottom:3px solid var(--red);
+  overflow:hidden;
+}
+.mascotBandInner {
+  display:flex; align-items:flex-end; gap:48px;
+}
+.mascotBandImg {
+  height:260px;
+  width:auto;
+  object-fit:contain;
+  flex-shrink:0;
+  filter:drop-shadow(0 0 20px rgba(0,174,239,0.3));
+  margin-bottom:-4px; /* touch the bottom edge */
+}
+.mascotBandText {
+  padding:60px 0;
+  flex:1;
+}
+.mascotBandText h2 {
+  font-family:var(--font-head);
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:900;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:14px;
+}
+.mascotBandText p {
+  color:rgba(255,255,255,0.65);
+  font-size:1rem;
+  line-height:1.7;
+  max-width:480px;
+  margin-bottom:28px;
+}
 .stat:last-child { border-right:none; }
 .stat strong { display:block; font-family:var(--font-head); font-size:2.4rem; font-weight:900; color:var(--cyan); line-height:1; }
 .stat span { font-size:0.8rem; color:rgba(255,255,255,0.55); letter-spacing:0.05em; }
@@ -161,7 +219,6 @@
 }
 .partnerTag:hover { border-color:var(--cyan); color:var(--royal); transform:translateY(-2px); }
 
-/* ── RESPONSIVE ───────────────────────────── */
 @media(max-width:1100px) { .servGrid { grid-template-columns:repeat(3,1fr); } }
 @media(max-width:860px) {
   .statsRow { grid-template-columns:repeat(2,1fr); }
@@ -171,6 +228,12 @@
   .servGrid { grid-template-columns:repeat(2,1fr); }
   .divGrid { grid-template-columns:1fr; }
   .servHead { flex-direction:column; align-items:flex-start; gap:16px; }
+  /* Hide mascot on smaller screens so it doesn't overlap text */
+  .mascotWrap { display:none; }
+  .mascotBandInner { flex-direction:column; align-items:center; text-align:center; }
+  .mascotBandImg { height:200px; margin-bottom:0; }
+  .mascotBandText { padding:0 0 40px; }
+  .mascotBandText p { margin:0 auto 28px; }
 }
 @media(max-width:520px) {
   .servGrid { grid-template-columns:1fr; }

@@ -13,7 +13,7 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     // Connect to Formspree: replace YOUR_FORM_ID below
-    // const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
+    // const res = await fetch('https://formspree.io/f/xnjrazgq', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
     await new Promise(r => setTimeout(r, 800)); // remove this line when using real form
     setLoading(false);
     setSent(true);
@@ -112,7 +112,6 @@ export default function Contact() {
                   <span>✉️</span>
                   <div>
                     <strong>Email</strong>
-                    <a href="mailto:info@fix-it.ng">info@fix-it.ng</a>
                     <a href="mailto:fixit.9ja@gmail.com">fixit.9ja@gmail.com</a>
                   </div>
                 </div>

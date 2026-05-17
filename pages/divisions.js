@@ -7,9 +7,8 @@ const DIVS = [
     id: 'aircon',
     name: 'Fix-It Air Conditioner',
     tag: 'A Division of Fix-It Handyman Limited',
-    icon: '❄️',
+    logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png',
     color: 'var(--cyan)',
-    img: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80',
     desc: 'We supply, install, maintain, and repair air conditioning systems across the full spectrum — from residential split units to large commercial and industrial HVAC installations. Our certified technicians ensure your systems run efficiently, reliably, and within manufacturer specifications year-round.',
     items: [
       'Supply of split unit, cassette, ducted, and commercial AC systems',
@@ -25,9 +24,8 @@ const DIVS = [
     id: 'painters',
     name: 'Fix-It Painters',
     tag: 'A Division of Fix-It Handyman Limited',
-    icon: '🎨',
+    logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIX_IT_PAINTERS_LOGO_jgjyqc.png',
     color: 'var(--red)',
-    img: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=800&q=80',
     desc: 'We deliver professional, high-quality painting services for residential, commercial, and industrial buildings. From fresh interior repaint to full exterior weatherproofing and decorative finishes, our team works with precision, speed, and the right materials to give every surface a lasting, beautiful result.',
     items: [
       'Interior and exterior painting for homes and offices',
@@ -43,10 +41,9 @@ const DIVS = [
     id: 'safety',
     name: 'Fix-It Safety Services',
     tag: 'A Division of Fix-It Handyman Limited',
-    icon: '🔥',
+    logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIRE_SAFETY_LOGO_2_fet0a9.png',
     color: 'var(--royal)',
-    img: 'https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&q=80',
-    desc: 'We specialise in the inspection, servicing, refilling, and certification of fire extinguishers and fire safety equipment for homes, offices, factories, and public facilities. Keeping your fire safety equipment in full working order is not just good practice — it\'s the law, and we make compliance simple.',
+    desc: "We specialise in the inspection, servicing, refilling, and certification of fire extinguishers and fire safety equipment for homes, offices, factories, and public facilities. Keeping your fire safety equipment in full working order is not just good practice — it's the law, and we make compliance simple.",
     items: [
       'Fire extinguisher inspection and certification',
       'Refilling and recharging of all extinguisher types (CO₂, dry powder, foam, water)',
@@ -75,14 +72,15 @@ export default function Divisions() {
         </div>
       </section>
 
-      {/* Overview cards */}
+      {/* Overview cards — logo images instead of emoji */}
       <section className={s.overview}>
         <div className="container">
           <div className={s.overGrid}>
             {DIVS.map(d => (
               <a key={d.id} href={`#${d.id}`} className={s.overCard} style={{'--accent': d.color}}>
-                <span className={s.overIcon}>{d.icon}</span>
-                <strong>{d.name}</strong>
+                <div className={s.overLogoWrap}>
+                  <img src={d.logo} alt={d.name} className={s.overLogo} />
+                </div>
                 <span>Learn more ↓</span>
               </a>
             ))}
@@ -90,19 +88,16 @@ export default function Divisions() {
         </div>
       </section>
 
-      {/* Division detail blocks */}
+      {/* Division detail blocks — logo on left, services on right */}
       {DIVS.map((d, i) => (
         <section key={d.id} id={d.id} className={`${s.divBlock} ${i%2===1?s.divBlockAlt:''}`}>
           <div className="container">
             <div className={s.divGrid}>
-              <div className={s.divImg}>
-                <img src={d.img} alt={d.name} />
-                <div className={s.divImgBadge} style={{background: d.color}}>
-                  <span>{d.icon}</span>
-                </div>
+              <div className={s.divLogoPanel} style={{'--accent': d.color}}>
+                <img src={d.logo} alt={d.name} className={s.divLogo} />
               </div>
               <div className={s.divText}>
-                <p className="eyebrow" style={{color: d.color, '--clr': d.color}}>{d.tag}</p>
+                <p className="eyebrow" style={{color: d.color}}>{d.tag}</p>
                 <h2 style={{color:'var(--navy)'}}>{d.name}</h2>
                 <p className={s.divDesc}>{d.desc}</p>
                 <ul className={s.divItems}>

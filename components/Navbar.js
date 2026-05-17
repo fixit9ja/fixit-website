@@ -31,10 +31,9 @@ export default function Navbar() {
     <header className={`${s.header} ${scrolled ? s.solid : ''}`}>
       <div className={`container ${s.inner}`}>
         <Link href="/" className={s.logo}>
-          <img src={LOGO} alt="Fix-It Handyman Limited" />
-          <div className={s.logoWords}>
-            <span className={s.logoTop}>Fix-It Handyman</span>
-            <span className={s.logoBot}>Limited</span>
+          <div className={s.logoImgWrap}>
+            <img src={LOGO} alt="Fix-It Handyman Limited" className={s.logoImg} />
+            <sup className={s.tm}>™</sup>
           </div>
         </Link>
 

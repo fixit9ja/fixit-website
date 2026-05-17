@@ -55,6 +55,15 @@ export default function Home() {
           <Link href="/services" className="btn btn-red">Explore Services →</Link>
         </div>
 
+        {/* Mascot — floating right side of hero */}
+        <div className={s.mascotWrap}>
+          <img
+            src="https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIXIT_NEW_mascot_nf3bdw.png"
+            alt="Fix-It Mascot"
+            className={s.mascot}
+          />
+        </div>
+
         {/* Stats strip */}
         <div className={s.statsStrip}>
           <div className="container">
@@ -169,6 +178,24 @@ export default function Home() {
               <div className={s.whyCta}>
                 <Link href="/about" className="btn btn-red">About Us →</Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MASCOT CTA BAND ── */}
+      <section className={s.mascotBand}>
+        <div className="container">
+          <div className={s.mascotBandInner}>
+            <img
+              src="https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIXIT_NEW_mascot_nf3bdw.png"
+              alt="Fix-It Mascot"
+              className={s.mascotBandImg}
+            />
+            <div className={s.mascotBandText}>
+              <h2>Ready to Fix It?</h2>
+              <p>Whatever the project — big or small — our team is ready to deliver. Get in touch today for a free consultation and quote.</p>
+              <Link href="/contact" className="btn btn-red">Contact Us →</Link>
             </div>
           </div>
         </div>
