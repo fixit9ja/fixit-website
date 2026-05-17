@@ -28,7 +28,7 @@ const COMPLIANCE = [
   { abbr:'DUNS',  note:'International Credential' },
 ];
 
-const DEPT_COLOR = { Leadership:'var(--red)', Engineering:'var(--cyan)', Technology:'var(--royal)', Operations:'#2e8b57' };
+const DEPT_COLOR = { Leadership:'var(--red)', Engineering:'var(--cyan)', Technology:'var(--royal)', Operations:'#2e8b57', Finance:'#e67e22' };
 
 export default function About() {
   return (
