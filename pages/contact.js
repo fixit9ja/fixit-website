@@ -112,7 +112,6 @@ export default function Contact() {
                   <span>✉️</span>
                   <div>
                     <strong>Email</strong>
-                    <a href="mailto:info@fix-it.ng">info@fix-it.ng</a>
                     <a href="mailto:fixit.9ja@gmail.com">fixit.9ja@gmail.com</a>
                   </div>
                 </div>
