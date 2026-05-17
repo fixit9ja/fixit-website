@@ -5,12 +5,12 @@ import s from './clients.module.css';
 // Replace img with real Cloudinary logo URL for each client when ready.
 // For logo-only display, use a white/light background image or the actual logo PNG.
 const CLIENTS = [
-  { name: 'Nigerian Liquefied Natural Gas (NLNG)',          sector: 'Oil & Gas',          img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=60' },
-  { name: 'Honeywell Group',                                 sector: 'Conglomerate',        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
-  { name: 'ECOWAS',                                          sector: 'Intergovernmental',   img: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=60' },
+  { name: 'ECOWAS',          sector: 'Intergovernmental',          img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=60' },
+  { name: 'European Union Commission',                                 sector: 'International Body',        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
+  { name: 'International Organization for Migration (IOM)',                                          sector: 'International Body',   img: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=60' },
   { name: 'European Union Commission',                       sector: 'International Body',  img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&q=60' },
   { name: 'International Organization for Migration (IOM)', sector: 'International Body',  img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=60' },
-  { name: 'Client Embassy',                                  sector: 'Diplomatic Mission',  img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=60' },
+  { name: 'Botswana Embassy',                                  sector: 'Diplomatic Mission',  img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=60' },
   { name: 'Client NGO 1',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=60' },
   { name: 'Client NGO 2',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=60' },
   { name: 'Client Organization',                             sector: 'Government',          img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=60' },
