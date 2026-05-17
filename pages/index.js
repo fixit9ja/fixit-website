@@ -21,6 +21,7 @@ const SERVICES = [
 
 const DIVISIONS = [
   { name: 'Fix-It Air Conditioner', desc: 'Supply, maintenance and repair of AC units, from split systems to commercial installations.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984115/FIX_IT_AIRCONDITIONER_LOGO_2_x_j2rtod.png', anchor: 'aircon' },
+  { name: 'Fix-It Electrical',      desc: 'Residential and commercial electrical work from LV to HV. NEMSA registered and fully certified.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779030914/FIXIT_NEW_LOGO_BIGx_dltsil.png', anchor: 'electrical' },
   { name: 'Fix-It Painters',        desc: 'Professional painting of residential, commercial, and industrial buildings.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIX_IT_PAINTERS_LOGO_jgjyqc.png', anchor: 'painters' },
   { name: 'Fix-It Safety Services', desc: 'Inspection, servicing, and certification of fire extinguishers and safety equipment.', logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778984113/FIRE_SAFETY_LOGO_2_fet0a9.png', anchor: 'safety' },
 ];
@@ -216,6 +217,18 @@ export default function Home() {
               </p>
               <Link href="/contact" className="btn btn-red">Contact Us</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className={s.partnerSect}>
+        <div className="container">
+          <p className={s.partnerLabel}>Trusted OEM Partners and Associations</p>
+          <div className={s.partnerRow}>
+            {['Kongsberg', 'Teledyne', 'Trimble', 'Emerson', 'Fouani Group', 'Honeywell', '2M Kablo', 'COREN'].map(p => (
+              <div key={p} className={s.partnerTag}>{p}</div>
+            ))}
           </div>
         </div>
       </section>
