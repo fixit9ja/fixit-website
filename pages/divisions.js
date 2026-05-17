@@ -21,6 +21,25 @@ const DIVS = [
     ],
   },
   {
+    id: 'electrical',
+    name: 'Fix-It Electrical',
+    tag: 'A Division of Fix-It Handyman Limited',
+    logo: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779030914/FIXIT_NEW_LOGO_BIGx_dltsil.png',
+    color: 'var(--gold)',
+    desc: 'Fix-It Electrical is our dedicated electrical services division, handling both residential and commercial electrical work from Low Voltage (LV) to High Voltage (HV) installations. We are fully registered under NEMSA, ensuring every project meets Nigerian regulatory standards and international best practices.',
+    items: [
+      'Residential wiring and electrical installations',
+      'Commercial and industrial electrical work',
+      'Low Voltage (LV) and High Voltage (HV) installations',
+      'Electrical panel and distribution board installation',
+      'Power factor correction and load balancing',
+      'Generator installation and changeover systems',
+      'Electrical fault diagnosis and repairs',
+      'Solar and renewable energy system integration',
+      'NEMSA-certified inspections and compliance documentation',
+    ],
+  },
+  {
     id: 'painters',
     name: 'Fix-It Painters',
     tag: 'A Division of Fix-It Handyman Limited',
@@ -58,7 +77,7 @@ const DIVS = [
 
 export default function Divisions() {
   return (
-    <Layout title="Our Divisions" description="Fix-It Handyman Limited's specialised divisions: Fix-It Air Conditioner, Fix-It Painters, and Fix-It Safety Services.">
+    <Layout title="Our Divisions" description="Fix-It Handyman Limited's specialised divisions: Fix-It Air Conditioner, Fix-It Electrical, Fix-It Painters, and Fix-It Safety Services.">
 
       <section className={s.hero}>
         <div className={s.heroBg}>
@@ -118,7 +137,7 @@ export default function Divisions() {
       <section className={s.cta}>
         <div className="container">
           <h2>All Divisions. One Company.</h2>
-          <p>Whether you need AC servicing, a fresh coat of paint, or fire safety compliance. We have a dedicated team ready.</p>
+          <p>Whether you need AC servicing, electrical work, a fresh coat of paint, or fire safety compliance. We have a dedicated team ready.</p>
           <Link href="/contact" className="btn btn-red" style={{marginTop:28}}>Contact Us Today</Link>
         </div>
       </section>
