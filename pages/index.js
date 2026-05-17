@@ -29,7 +29,7 @@ const WHY = [
   { icon: '🔰', t: 'Fully Registered', d: 'CAC, FIRS, NEMSA, ITF, NSITF, BPP and SCUML compliant.' },
   { icon: '🤝', t: 'OEM Partnerships', d: 'Trusted representatives for leading global technology and engineering manufacturers across marine, positioning, automation, and industrial solutions.' },
   { icon: '⚙️', t: 'End-to-End Delivery', d: 'From planning through after-sales, we own the full lifecycle.' },
-  { icon: '🏆', t: 'Proven Track Record', d: 'Public & private sector clients across oil & gas, NGO's, healthcare, and government.' },
+  { icon: '🏆', t: 'Proven Track Record', d: 'Public & private sector clients across oil & gas, NGOs, healthcare, and government.' },
 ];
 
 export default function Home() {
