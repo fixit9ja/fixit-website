@@ -35,12 +35,13 @@ const WHY = [
 export default function Home() {
   return (
     <Layout>
-      {/* ── HERO ── */}
+     {/* ── HERO ── */}
       <section className={s.hero}>
         <div className={s.heroBg}>
           <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=85" alt="" />
           <div className={s.heroMask} />
         </div>
+        <div className={`container ${s.heroContent}`}>
           <h1 className={s.heroH1}>
             Nigeria's<br />
             <span>Multi-Disciplinary</span><br />
