@@ -4,9 +4,9 @@ import s from './about.module.css';
 
 const TEAM = [
   { name: 'Ifeanyi G. Okeke',              role: 'Chief Executive Officer / MD',           dept: 'Leadership' },
-  { name: 'Okoli Chinenye Peace',              role: 'Chief Operating Officer',           dept: 'Leadership' },
+  { name: 'Okoli C. Peace',              role: 'Chief Operating Officer',           dept: 'Leadership' },
   { name: 'Paul N. Ilanghom',              role: 'Human Resource Manager',           dept: 'Leadership' },
-  { name: 'Engr. Chukwuebuka E. Okeke',   role: 'Electrical & Electronics Engr', dept: 'Engineering' },
+  { name: 'Engr. Chukwuebuka Okeke',   role: 'Electrical & Electronics Engr', dept: 'Engineering' },
   { name: 'Engr. Sunday Sule',           role: 'Mechanical Engineer',              dept: 'Engineering' },
   { name: 'Engr. Magnus Hwosafe',          role: 'Civil & Structural Engineer',        dept: 'Engineering' },
  { name: 'Nzube Dominic Okonkwo',                   role: 'Finance / Accountant',dept: 'Finance' },
