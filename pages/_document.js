@@ -1,21 +1,17 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-
+const LOGO = 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778979476/FIX-IT_HANYMAN_u0w1ko.png';
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
-          rel="stylesheet"
-        />
-        <meta name="theme-color" content="#1A3A6B" />
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/png" href={LOGO} />
+        <link rel="apple-touch-icon" href={LOGO} />
+        <meta name="theme-color" content="#0D1E3D" />
       </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
+      <body><Main /><NextScript /></body>
     </Html>
   );
 }

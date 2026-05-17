@@ -1,174 +1,165 @@
 import Layout from '../components/Layout';
 import { useState } from 'react';
-import styles from './contact.module.css';
-
-const OFFICES = [
-  {
-    city: 'Abuja (Head Office)',
-    addr: 'Suite B-005, Quad Plaza, Ameh Ebute Street, Wuye District, Abuja-FCT',
-    icon: '🏢',
-  },
-  {
-    city: 'Lagos Office',
-    addr: '3, Oyedele Ogunniyi Street, Anthony Village, Lagos State',
-    icon: '🏙️',
-  },
-];
+import s from './contact.module.css';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' });
+  const [form, setForm] = useState({ name:'', email:'', phone:'', service:'', message:'' });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
+  const onChange = e => setForm({...form, [e.target.name]: e.target.value});
 
-  const handleSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault();
-    // In production connect to Formspree, Netlify Forms, or your API
+    setLoading(true);
+    // Connect to Formspree: replace YOUR_FORM_ID below
+    // const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
+    await new Promise(r => setTimeout(r, 800)); // remove this line when using real form
+    setLoading(false);
     setSent(true);
   };
 
   return (
-    <Layout title="Contact Us" description="Contact Fix-It Handyman Limited for engineering, construction, hydrographic services, and technical solutions across Nigeria.">
+    <Layout title="Contact" description="Contact Fix-It Handyman Limited — Abuja and Lagos offices. Engineering, construction, and technical services across Nigeria.">
 
-      <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80" alt="Contact" />
-          <div className={styles.heroOverlay} />
+      <section className={s.hero}>
+        <div className={s.heroBg}>
+          <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80" alt="" />
+          <div className={s.heroMask} />
         </div>
-        <div className={`container ${styles.heroContent}`}>
-          <span className="section-label">Get in Touch</span>
+        <div className={`container ${s.heroContent}`}>
+          <p className="eyebrow">Get in Touch</p>
           <h1>Contact Us</h1>
-          <p>Ready to start your project? Reach out and our team will respond within one business day.</p>
+          <p>Our team will respond within one business day.</p>
         </div>
       </section>
 
-      <section className={styles.contactSection}>
+      <section className={s.main}>
         <div className="container">
-          <div className={styles.contactGrid}>
+          <div className={s.layout}>
 
-            {/* Form */}
-            <div className={styles.formWrap}>
+            {/* FORM */}
+            <div className={s.formWrap}>
               <h2>Send Us a Message</h2>
-              <p>Fill in the form below and our team will be in touch with a tailored response.</p>
-
+              <p>Tell us about your project and we'll respond with a tailored quote.</p>
               {sent ? (
-                <div className={styles.successMsg}>
+                <div className={s.success}>
                   <span>✅</span>
                   <div>
-                    <strong>Message Sent!</strong>
-                    <p>Thank you for reaching out. We'll respond within one business day.</p>
+                    <strong>Message Received!</strong>
+                    <p>Thank you — we'll be in touch within one business day.</p>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className={styles.form}>
-                  <div className={styles.formRow}>
-                    <div className={styles.formGroup}>
+                <form onSubmit={onSubmit} className={s.form}>
+                  <div className={s.row}>
+                    <div className={s.field}>
                       <label htmlFor="name">Full Name *</label>
-                      <input id="name" name="name" type="text" required placeholder="e.g. Emeka Okafor"
-                        value={form.name} onChange={handleChange} />
+                      <input id="name" name="name" type="text" required placeholder="e.g. Emeka Okafor" value={form.name} onChange={onChange} />
                     </div>
-                    <div className={styles.formGroup}>
-                      <label htmlFor="email">Email Address *</label>
-                      <input id="email" name="email" type="email" required placeholder="you@example.com"
-                        value={form.email} onChange={handleChange} />
+                    <div className={s.field}>
+                      <label htmlFor="email">Email *</label>
+                      <input id="email" name="email" type="email" required placeholder="you@example.com" value={form.email} onChange={onChange} />
                     </div>
                   </div>
-                  <div className={styles.formRow}>
-                    <div className={styles.formGroup}>
+                  <div className={s.row}>
+                    <div className={s.field}>
                       <label htmlFor="phone">Phone Number</label>
-                      <input id="phone" name="phone" type="tel" placeholder="+234 xxx xxx xxxx"
-                        value={form.phone} onChange={handleChange} />
+                      <input id="phone" name="phone" type="tel" placeholder="+234 xxx xxx xxxx" value={form.phone} onChange={onChange} />
                     </div>
-                    <div className={styles.formGroup}>
+                    <div className={s.field}>
                       <label htmlFor="service">Service Required</label>
-                      <select id="service" name="service" value={form.service} onChange={handleChange}>
+                      <select id="service" name="service" value={form.service} onChange={onChange}>
                         <option value="">Select a service...</option>
-                        <option>Engineering & General Contracting</option>
-                        <option>Hydrographic Equipment Services</option>
-                        <option>Marine Survey Support</option>
-                        <option>Handyman & Maintenance</option>
-                        <option>Medical Facility Setup</option>
-                        <option>IT Infrastructure</option>
-                        <option>Equipment Procurement</option>
-                        <option>Other</option>
+                        <optgroup label="Main Services">
+                          <option>Engineering & General Contracting</option>
+                          <option>Hydrographic Equipment Services</option>
+                          <option>Marine Survey Support</option>
+                          <option>Handyman & Maintenance</option>
+                          <option>Medical Facility Setup</option>
+                          <option>IT Infrastructure</option>
+                          <option>Equipment Procurement</option>
+                        </optgroup>
+                        <optgroup label="Divisions">
+                          <option>Fix-It Air Conditioner</option>
+                          <option>Fix-It Painters</option>
+                          <option>Fix-It Safety Services</option>
+                        </optgroup>
+                        <option>Other / Not Sure</option>
                       </select>
                     </div>
                   </div>
-                  <div className={styles.formGroup}>
+                  <div className={s.field}>
                     <label htmlFor="message">Project Details *</label>
-                    <textarea id="message" name="message" required rows={5}
-                      placeholder="Please describe your project, requirements, or question..."
-                      value={form.message} onChange={handleChange} />
+                    <textarea id="message" name="message" required rows={5} placeholder="Describe your project, location, requirements, or any questions..." value={form.message} onChange={onChange} />
                   </div>
-                  <button type="submit" className={`btn btn-primary ${styles.submitBtn}`}>
-                    Send Message →
+                  <button type="submit" className={`btn btn-red ${s.submit}`} disabled={loading}>
+                    {loading ? 'Sending...' : 'Send Message →'}
                   </button>
                 </form>
               )}
             </div>
 
-            {/* Info */}
-            <div className={styles.infoWrap}>
-              <div className={styles.infoCard}>
+            {/* INFO */}
+            <div className={s.info}>
+              <div className={s.infoCard}>
                 <h3>Contact Information</h3>
-
-                <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>📞</span>
-                  <div>
-                    <strong>Phone</strong>
-                    <a href="tel:+2349021111193">+234 902 111 1193</a>
-                  </div>
+                <div className={s.infoItem}>
+                  <span>📞</span>
+                  <div><strong>Phone</strong><a href="tel:+2349021111193">+234 902 111 1193</a></div>
                 </div>
-
-                <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>✉️</span>
+                <div className={s.infoItem}>
+                  <span>✉️</span>
                   <div>
                     <strong>Email</strong>
                     <a href="mailto:info@fix-it.ng">info@fix-it.ng</a>
                     <a href="mailto:fixit.9ja@gmail.com">fixit.9ja@gmail.com</a>
                   </div>
                 </div>
-
-                <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>🌐</span>
-                  <div>
-                    <strong>Website</strong>
-                    <a href="https://www.fix-it.ng" target="_blank" rel="noopener noreferrer">www.fix-it.ng</a>
-                  </div>
+                <div className={s.infoItem}>
+                  <span>🌐</span>
+                  <div><strong>Website</strong><a href="https://www.fix-it.ng" target="_blank" rel="noopener noreferrer">www.fix-it.ng</a></div>
                 </div>
 
-                <div className={styles.divider} />
+                <div className={s.divider} />
 
                 <h4>Our Offices</h4>
-                {OFFICES.map(o => (
-                  <div key={o.city} className={styles.officeItem}>
-                    <span>{o.icon}</span>
-                    <div>
-                      <strong>{o.city}</strong>
-                      <span>{o.addr}</span>
-                    </div>
-                  </div>
-                ))}
-
-                <div className={styles.divider} />
-
-                <div className={styles.hours}>
-                  <h4>Business Hours</h4>
-                  <div className={styles.hoursRow}>
-                    <span>Monday – Friday</span>
-                    <span>8:00 AM – 5:00 PM</span>
-                  </div>
-                  <div className={styles.hoursRow}>
-                    <span>Saturday</span>
-                    <span>9:00 AM – 2:00 PM</span>
-                  </div>
-                  <div className={styles.hoursRow}>
-                    <span>Sunday</span>
-                    <span>By appointment</span>
+                <div className={s.office}>
+                  <span>🏢</span>
+                  <div>
+                    <strong>Head Office — Abuja</strong>
+                    <span>Suite B-005, Quad Plaza, Ameh Ebute St, Wuye District, Abuja-FCT</span>
                   </div>
                 </div>
+                <div className={s.office}>
+                  <span>🏙️</span>
+                  <div>
+                    <strong>Lagos Office</strong>
+                    <span>3, Oyedele Ogunniyi St, Anthony Village, Lagos State</span>
+                  </div>
+                </div>
+
+                <div className={s.divider} />
+
+                <h4>Business Hours</h4>
+                <div className={s.hoursTable}>
+                  <div className={s.hoursRow}>
+                    <span>Monday – Friday</span>
+                    <strong>9:00 AM – 5:00 PM</strong>
+                  </div>
+                  <div className={s.hoursRow}>
+                    <span>Saturday</span>
+                    <strong className={s.appt}>By Appointment</strong>
+                  </div>
+                  <div className={s.hoursRow}>
+                    <span>Sunday</span>
+                    <strong className={s.appt}>By Appointment</strong>
+                  </div>
+                </div>
+                <p className={s.hoursNote}>* Weekend appointments must be booked in advance via phone or email.</p>
               </div>
             </div>
+
           </div>
         </div>
       </section>

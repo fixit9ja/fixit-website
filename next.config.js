@@ -6,5 +6,4 @@ const nextConfig = {
     domains: ['res.cloudinary.com', 'images.unsplash.com'],
   },
 };
-
 module.exports = nextConfig;

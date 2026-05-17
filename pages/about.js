@@ -1,113 +1,85 @@
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import styles from './about.module.css';
+import s from './about.module.css';
 
 const TEAM = [
-  {
-    name: 'Ifeanyi G. Okeke',
-    role: 'CEO / Managing Director',
-    img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-    desc: 'BSc Physical & Industrial Physics. 15+ years in engineering & construction. HSE & Project Management certified. Member of LECAN.',
-  },
-  {
-    name: 'Engr. Chukwuebuka E. Okeke',
-    role: 'Partner / Electrical & Electronics Engineer',
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-    desc: 'Certified Electrical & Electronics Engineer. 10+ years experience. COREN & NSE registered. Led projects for NLNG and Honeywell Group.',
-  },
-  {
-    name: 'Engr. Amachree Sule',
-    role: 'Senior Electrical Engineer',
-    img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-    desc: 'M.Tech & B.Tech Electrical Engineering (RSUST). B.Sc Physics/Materials Science (UNIPORT). 20+ years professional experience.',
-  },
-  {
-    name: 'Engr. Magnus Hwosafe',
-    role: 'Lead Civil & Structural Engineer',
-    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
-    desc: 'B.Eng Civil Engineering, University of Benin. COREN registered. NSE member. 10+ years in substation construction & project management.',
-  },
-  {
-    name: 'Oluwafemi Adeola',
-    role: 'Lead, ICT Department',
-    img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
-    desc: 'Enterprise Infrastructure Architect with 16+ years managing IT teams. Cybersecurity & IT Security Analyst. Background in Computer Electronics Engineering.',
-  },
-  {
-    name: 'Martins Abu',
-    role: 'Senior HVAC & Air Conditioning Specialist',
-    img: 'https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=400&q=80',
-    desc: 'Certified HVAC Service Technician with 27 years experience in heating, air conditioning, refrigerant systems, and duct fabrication.',
-  },
+  { name: 'Ifeanyi G. Okeke',              role: 'Chief Executive Officer / MD',           dept: 'Leadership' },
+  { name: 'Engr. Chukwuebuka E. Okeke',   role: 'Partner / Electrical & Electronics Engr', dept: 'Engineering' },
+  { name: 'Engr. Amachree Sule',           role: 'Senior Electrical Engineer',              dept: 'Engineering' },
+  { name: 'Engr. Magnus Hwosafe',          role: 'Lead Civil & Structural Engineer',        dept: 'Engineering' },
+  { name: 'Oluwafemi Adeola',              role: 'Lead, ICT Department',                    dept: 'Technology' },
+  { name: 'Martins Abu',                   role: 'Senior HVAC & Air Conditioning Specialist',dept: 'Operations' },
 ];
 
 const COMPLIANCE = [
-  { abbr: 'CAC', full: 'Corporate Affairs Commission', note: 'RC 1385277' },
-  { abbr: 'FIRS', full: 'Federal Inland Revenue Service', note: 'TIN: 20204119-0001' },
-  { abbr: 'NSITF', full: 'Nigeria Social Insurance Trust Fund', note: 'Current Compliance' },
-  { abbr: 'ITF', full: 'Industrial Training Fund', note: 'Current Compliance' },
-  { abbr: 'BPP', full: 'Bureau of Public Procurement', note: 'Valid Certificate' },
-  { abbr: 'NEMSA', full: 'Nigerian Electricity Mgmt Services Agency', note: 'Licensed' },
-  { abbr: 'SCUML', full: 'Special Control Unit Against Money Laundering', note: 'Registered' },
-  { abbr: 'DUNS', full: 'Dun & Bradstreet', note: 'International Credential' },
+  { abbr:'CAC',   note:'RC 1385277' },
+  { abbr:'FIRS',  note:'TIN: 20204119-0001' },
+  { abbr:'NSITF', note:'Current Compliance' },
+  { abbr:'ITF',   note:'Current Compliance' },
+  { abbr:'BPP',   note:'Valid Certificate' },
+  { abbr:'NEMSA', note:'Licensed' },
+  { abbr:'SCUML', note:'Registered' },
+  { abbr:'DUNS',  note:'International Credential' },
 ];
+
+const DEPT_COLOR = { Leadership:'var(--red)', Engineering:'var(--cyan)', Technology:'var(--royal)', Operations:'#2e8b57' };
 
 export default function About() {
   return (
-    <Layout title="About Us" description="Learn about Fix-It Handyman Limited — Nigeria's trusted multi-disciplinary engineering and technical services company since 2017.">
+    <Layout title="About Us" description="Learn about Fix-It Handyman Limited — Nigeria's trusted multi-disciplinary engineering company since 2017.">
 
-      {/* ── PAGE HERO ──────────────────────────────── */}
-      <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <img src="https://images.unsplash.com/photo-1521791055366-0d553381ad47?w=1600&q=80" alt="Our team" />
-          <div className={styles.heroOverlay} />
+      {/* HERO */}
+      <section className={s.hero}>
+        <div className={s.heroBg}>
+          <img src="https://images.unsplash.com/photo-1521791055366-0d553381ad47?w=1600&q=80" alt="" />
+          <div className={s.heroMask} />
         </div>
-        <div className={`container ${styles.heroContent}`}>
-          <span className="section-label">About Us</span>
+        <div className={`container ${s.heroContent}`}>
+          <p className="eyebrow">About Us</p>
           <h1>Who We Are</h1>
           <p>A Nigerian engineering company built on expertise, integrity, and a passion for excellence.</p>
         </div>
       </section>
 
-      {/* ── STORY ──────────────────────────────────── */}
-      <section className={styles.story}>
+      {/* STORY */}
+      <section className={s.story}>
         <div className="container">
-          <div className={styles.storyGrid}>
-            <div>
-              <span className="section-label">Our Story</span>
-              <h2 className="section-title">From Humble Beginnings<br />to National Reach</h2>
+          <div className={s.storyGrid}>
+            <div className={s.storyText}>
+              <p className="eyebrow">Our Story</p>
+              <h2 className="section-title">From Abuja.<br /><span>To The Nation.</span></h2>
               <p>Fix-It Handyman Limited was incorporated in Nigeria in January 2017 with a clear purpose: to provide reliable, high-quality technical services to businesses, government agencies, and individuals across Nigeria.</p>
-              <p style={{ marginTop: 16 }}>What began as a focused handyman and maintenance business has since evolved into a multi-disciplinary company with seven service divisions — spanning engineering contracting, hydrographic equipment services, marine survey support, medical facility construction, IT infrastructure, and advanced technical equipment procurement.</p>
-              <p style={{ marginTop: 16 }}>Today, we operate from our head office in Abuja (FCT) and a regional office in Lagos State, serving clients across both the public and private sectors with a team of certified professionals committed to delivering international-standard results.</p>
+              <p>What began as a focused handyman and maintenance business has evolved into a multi-disciplinary company with seven service divisions — spanning engineering contracting, hydrographic equipment services, marine survey support, medical facility construction, IT infrastructure, and advanced technical procurement.</p>
+              <p>Today, we operate from our head office in Abuja (FCT) and a regional office in Lagos, serving clients across both the public and private sectors.</p>
             </div>
-            <div className={styles.storyImgs}>
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction work" className={styles.storyImg1} />
-              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Marine operations" className={styles.storyImg2} />
+            <div className={s.storyImgs}>
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction" className={s.img1} />
+              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Marine" className={s.img2} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── MISSION / VISION ───────────────────────── */}
-      <section className={styles.mvSection}>
+      {/* MISSION / VISION / VALUES */}
+      <section className={s.mvSect}>
         <div className="container">
-          <div className={styles.mvGrid}>
-            <div className={styles.mvCard}>
-              <div className={styles.mvIcon}>🎯</div>
-              <h3>Our Mission</h3>
-              <p>To deliver reliable, high-quality, and innovative technical solutions across engineering, construction, maintenance, hydrographic services, and specialized procurement. We exceed client expectations through professionalism, precision, and integrity — providing end-to-end support that empowers our clients to operate efficiently, safely, and sustainably.</p>
+          <div className={s.mvGrid}>
+            <div className={s.mvCard} style={{borderTopColor:'var(--red)'}}>
+              <div className={s.mvNum}>01</div>
+              <h3>Mission</h3>
+              <p>To deliver reliable, high-quality, and innovative technical solutions across engineering, construction, maintenance, hydrographic services, and procurement — exceeding client expectations through professionalism, precision, and integrity.</p>
             </div>
-            <div className={`${styles.mvCard} ${styles.mvCardGold}`}>
-              <div className={styles.mvIcon}>🌟</div>
-              <h3>Our Vision</h3>
-              <p>To be the foremost multi-disciplinary engineering and technical services company in West Africa, renowned for innovation, reliability, and sustainable solutions that empower communities and industries across the region.</p>
+            <div className={s.mvCard} style={{borderTopColor:'var(--cyan)'}}>
+              <div className={s.mvNum}>02</div>
+              <h3>Vision</h3>
+              <p>To be the foremost multi-disciplinary engineering and technical services company in West Africa — renowned for innovation, reliability, and sustainable solutions that empower communities and industries.</p>
             </div>
-            <div className={styles.mvCard}>
-              <div className={styles.mvIcon}>💎</div>
-              <h3>Our Core Values</h3>
-              <ul className={styles.valuesList}>
-                {['Integrity & Transparency', 'Technical Excellence', 'Client-First Approach', 'Safety & Compliance', 'Continuous Innovation'].map(v => (
-                  <li key={v}><span>✓</span>{v}</li>
+            <div className={s.mvCard} style={{borderTopColor:'var(--royal)'}}>
+              <div className={s.mvNum}>03</div>
+              <h3>Core Values</h3>
+              <ul className={s.valList}>
+                {['Integrity & Transparency','Technical Excellence','Client-First Approach','Safety & Compliance','Continuous Innovation'].map(v=>(
+                  <li key={v}><span>—</span>{v}</li>
                 ))}
               </ul>
             </div>
@@ -115,26 +87,20 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── TEAM ───────────────────────────────────── */}
-      <section className={styles.team}>
+      {/* MANAGEMENT TEAM */}
+      <section className={s.teamSect}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 56 }}>
-            <span className="section-label">Our People</span>
-            <h2 className="section-title">The Management Team</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Led by certified engineers and seasoned professionals with decades of combined experience.
-            </p>
+          <div className={s.teamHead}>
+            <p className="eyebrow">Our People</p>
+            <h2 className="section-title">Management <span>Team</span></h2>
           </div>
-          <div className={styles.teamGrid}>
+          <div className={s.teamGrid}>
             {TEAM.map(m => (
-              <div key={m.name} className={styles.teamCard}>
-                <div className={styles.teamImgWrap}>
-                  <img src={m.img} alt={m.name} className={styles.teamImg} />
-                </div>
-                <div className={styles.teamInfo}>
-                  <h4>{m.name}</h4>
-                  <span className={styles.teamRole}>{m.role}</span>
-                  <p>{m.desc}</p>
+              <div key={m.name} className={s.teamCard}>
+                <div className={s.teamDept} style={{background: DEPT_COLOR[m.dept]}}>{m.dept}</div>
+                <div className={s.teamInfo}>
+                  <h3>{m.name}</h3>
+                  <span>{m.role}</span>
                 </div>
               </div>
             ))}
@@ -142,36 +108,21 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── COMPLIANCE ─────────────────────────────── */}
-      <section className={styles.compliance}>
+      {/* COMPLIANCE */}
+      <section className={s.compSect}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <span className="section-label">Compliance</span>
-            <h2 className="section-title">Regulatory Registrations</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              We are fully registered and compliant with all applicable Nigerian regulatory bodies.
-            </p>
+          <div className={s.compHead}>
+            <p className="eyebrow" style={{color:'var(--cyan)'}}>Fully Compliant</p>
+            <h2 className="section-title" style={{color:'var(--white)'}}>Regulatory <span style={{color:'var(--red)'}}>Registrations</span></h2>
           </div>
-          <div className={styles.complianceGrid}>
+          <div className={s.compGrid}>
             {COMPLIANCE.map(c => (
-              <div key={c.abbr} className={styles.compCard}>
+              <div key={c.abbr} className={s.compCard}>
                 <strong>{c.abbr}</strong>
-                <span>{c.full}</span>
-                <em>{c.note}</em>
+                <span>{c.note}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── CTA ────────────────────────────────────── */}
-      <section className={styles.cta}>
-        <div className="container">
-          <h2>Ready to Work With Us?</h2>
-          <p>Contact our team for a consultation and tailored project quote.</p>
-          <Link href="/contact" className="btn btn-primary" style={{ marginTop: 28 }}>
-            Contact Us Today
-          </Link>
         </div>
       </section>
     </Layout>
