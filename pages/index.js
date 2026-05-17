@@ -27,9 +27,9 @@ const DIVISIONS = [
 
 const WHY = [
   { icon: '🔰', t: 'Fully Registered', d: 'CAC, FIRS, NEMSA, ITF, NSITF, BPP and SCUML compliant.' },
-  { icon: '🤝', t: 'OEM Partnerships', d: 'Authorised reps for Kongsberg, Teledyne, Trimble, Emerson and more.' },
+  { icon: '🤝', t: 'OEM Partnerships', d: 'Trusted representatives for leading global technology and engineering manufacturers across marine, positioning, automation, and industrial solutions.' },
   { icon: '⚙️', t: 'End-to-End Delivery', d: 'From planning through after-sales, we own the full lifecycle.' },
-  { icon: '🏆', t: 'Proven Track Record', d: 'Public & private sector clients across oil & gas, healthcare, and government.' },
+  { icon: '🏆', t: 'Proven Track Record', d: 'Public & private sector clients across oil & gas, NGO's, healthcare, and government.' },
 ];
 
 export default function Home() {
@@ -41,11 +41,6 @@ export default function Home() {
           <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=85" alt="" />
           <div className={s.heroMask} />
         </div>
-        <div className={`container ${s.heroContent}`}>
-          <div className={s.heroPill}>
-            <span className={s.dot} />
-            RC 1385277 · Abuja &amp; Lagos · Est. 2017
-          </div>
           <h1 className={s.heroH1}>
             Nigeria's<br />
             <span>Multi-Disciplinary</span><br />
@@ -165,7 +160,7 @@ export default function Home() {
             <div className={s.whyLeft}>
               <p className="eyebrow">Why Choose Us</p>
               <h2 className="section-title">The Fix-It<br /><span>Advantage</span></h2>
-              <img src="https://images.unsplash.com/photo-1521791055366-0d553381ad47?w=700&q=80" alt="Professional team" className={s.whyImg} />
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80" alt="Professional team" className={s.whyImg} />
             </div>
             <div className={s.whyRight}>
               {WHY.map(w => (
@@ -202,18 +197,3 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ── PARTNERS ── */}
-      <section className={s.partnerSect}>
-        <div className="container">
-          <p className={s.partnerLabel}>Trusted OEM Partners &amp; Associations</p>
-          <div className={s.partnerRow}>
-            {['Kongsberg','Teledyne','Trimble','Emerson','Fouani Group','Honeywell','2M Kablo','COREN'].map(p=>(
-              <div key={p} className={s.partnerTag}>{p}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
