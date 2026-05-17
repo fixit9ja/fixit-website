@@ -60,7 +60,7 @@ export default function About() {
             </div>
             <div className={s.storyImgs}>
               <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Construction" className={s.img1} />
-              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Marine" className={s.img2} />
+              <img src="https://res.cloudinary.com/dbjahorp6/image/upload/v1779013259/IMG_2331_wkgvsl.jpg" alt="Marine" className={s.img2} />
             </div>
           </div>
         </div>
