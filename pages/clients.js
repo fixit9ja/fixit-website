@@ -7,9 +7,9 @@ import s from './clients.module.css';
 const CLIENTS = [
   { name: 'ECOWAS',          sector: 'Intergovernmental',          img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=60' },
   { name: 'European Union Commission',                                 sector: 'International Body',        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
-  { name: 'International Organization for Migration (IOM)',                                          sector: 'International Body',   img: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=60' },
+  { name: 'International Organization for Migration (IOM)',                                          sector: 'International Body',   img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
   { name: 'European Union Commission',                       sector: 'International Body',  img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&q=60' },
-  { name: 'International Organization for Migration (IOM)', sector: 'International Body',  img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=60' },
+  { name: 'International Organization for Migration (IOM)', sector: 'International Body',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
   { name: 'Botswana Embassy',                                  sector: 'Diplomatic Mission',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779068813/Coat_of_arms_of_Botswana_v6ayjl.svg' },
   { name: 'Client NGO 1',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=60' },
   { name: 'Client NGO 2',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=60' },
