@@ -30,53 +30,55 @@
   border-radius: var(--r-sm);
   overflow: hidden;
   box-shadow: var(--sh-sm);
+  border: 1px solid var(--light);
   transition: all 0.28s;
   display: flex;
   flex-direction: column;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); }
+.card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); border-color: var(--cyan); }
 
-/* Logo area — where client logo will sit */
+/* Logo area — white background, logo fits inside without cropping */
 .logoWrap {
   position: relative;
   height: 140px;
-  overflow: hidden;
-  background: var(--light);  /* light grey until real logo is added */
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--light);
 }
 .logoImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.25;             /* faded since it's a placeholder */
-  transition: opacity 0.3s;
+  object-fit: contain;   /* full logo visible, no cropping */
+  object-position: center;
 }
-/* When you replace with a real logo PNG, add object-fit: contain and remove opacity */
-.logoOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(13,30,61,0.3), transparent);
-}
+/* Overlay only for the sector tag positioning */
+.logoOverlay { display: none; }
+
 .sector {
   position: absolute;
   top: 0;
   left: 0;
   font-family: var(--font-head);
-  font-size: 0.66rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--white);
-  padding: 5px 12px;
+  padding: 4px 10px;
+  border-radius: 0 0 4px 0;
 }
 
-/* Name only — clean and minimal */
+/* Name — clean and minimal */
 .cardName {
   padding: 14px 16px;
-  border-top: 2px solid var(--light);
+  background: var(--white);
 }
 .cardName p {
   font-family: var(--font-head);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--navy);
