@@ -230,6 +230,7 @@ export default function Home() {
               <h2 className="section-title">Organizations We Have <span>Worked For</span></h2>
               <p className="section-sub">Trusted by public institutions, private companies, and NGOs across Nigeria.</p>
             </div>
+          </div>
           <div className={s.clientsGrid}>
             {[
               { name:'ECOWAS Commission',                          sector:'Intergovernmental',  img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
@@ -255,6 +256,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
     </Layout>
   );
