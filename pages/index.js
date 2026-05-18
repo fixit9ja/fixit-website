@@ -234,17 +234,16 @@ export default function Home() {
           </div>
           <div className={s.clientsGrid}>
             {[
-              { name:'Nigerian Liquefied Natural Gas (NLNG)', sector:'Oil & Gas',   img:'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=60' },
-              { name:'Honeywell Group',                        sector:'Conglomerate',img:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
-              { name:'Client Organization 3',                  sector:'Government',  img:'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=60' },
-              { name:'Client Organization 4',                  sector:'Healthcare',  img:'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=60' },
-              { name:'Client Organization 5',                  sector:'Marine',      img:'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=60' },
-              { name:'Client Organization 6',                  sector:'NGO',         img:'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=60' },
+              { name:'ECOWAS Commission',                          sector:'Intergovernmental',  img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
+              { name:'International Organization for Migration',   sector:'International Body', img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
+              { name:'Netherlands Embassy in Nigeria',             sector:'Diplomatic Mission', img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070467/599c8a2f336bb_cg8ypo.jpg' },
+              { name:'Malaria Consortium',                         sector:'NGO',                img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070318/Malaria-Consortium-Logo-no-strapline_xdemep.webp' },
+              { name:'Rural Electrification Agency',               sector:'Government',         img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070819/REA_GREEN_DAVID_guxegf.png' },
+              { name:'Plan International',                         sector:'NGO',                img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071632/Plan_International_Logo.svg_sofp4e.png' },
             ].map((c, i) => (
               <div key={i} className={s.clientCard}>
                 <div className={s.clientImgWrap}>
                   <img src={c.img} alt={c.name} className={s.clientImg} />
-                  <div className={s.clientImgOverlay} />
                 </div>
                 <div className={s.clientInfo}>
                   <strong>{c.name}</strong>
