@@ -2,34 +2,34 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import s from './clients.module.css';
 
-// Replace img with real Cloudinary logo URL for each client when ready.
-// For logo-only display, use a white/light background image or the actual logo PNG.
 const CLIENTS = [
-  { name: 'Nigerian Liquefied Natural Gas (NLNG)',          sector: 'Oil & Gas',          img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=60' },
-  { name: 'Honeywell Group',                                 sector: 'Conglomerate',        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
-  { name: 'ECOWAS',                                          sector: 'Intergovernmental',   img: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&q=60' },
-  { name: 'European Union Commission',                       sector: 'International Body',  img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&q=60' },
-  { name: 'International Organization for Migration (IOM)', sector: 'International Body',  img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=60' },
-  { name: 'Client Embassy',                                  sector: 'Diplomatic Mission',  img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=60' },
-  { name: 'Client NGO 1',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&q=60' },
-  { name: 'Client NGO 2',                                    sector: 'NGO',                 img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=60' },
-  { name: 'Client Organization',                             sector: 'Government',          img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=60' },
-  { name: 'Client Organization',                             sector: 'Healthcare',          img: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400&q=60' },
-  { name: 'Client Organization',                             sector: 'Marine',              img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=60' },
-  { name: 'Client Organization',                             sector: 'Commercial',          img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&q=60' },
+  { name: 'ECOWAS Commission, Abuja',                        sector: 'Intergovernmental',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
+  { name: 'European Union Commission, Abuja',                sector: 'International Body', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
+  { name: 'International Organization for Migration (IOM)',  sector: 'International Body', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
+  { name: 'Netherlands Embassy in Nigeria',                  sector: 'Diplomatic Mission', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070467/599c8a2f336bb_cg8ypo.jpg' },
+  { name: 'Norwegian Embassy in Nigeria',                    sector: 'Diplomatic Mission', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069225/norveska-ambasada.jpg_tknwyi.webp' },
+  { name: 'Botswana Embassy in Nigeria',                     sector: 'Diplomatic Mission', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070142/botswana-773x435_kekyhd.jpg' },
+  { name: 'Malaria Consortium',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070318/Malaria-Consortium-Logo-no-strapline_xdemep.webp' },
+  { name: 'FHI 360',                                         sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070675/fhi-360-logo.tmb-1920v_j5pcjp.webp' },
+  { name: 'Rural Electrification Agency',                    sector: 'Government',         img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070819/REA_GREEN_DAVID_guxegf.png' },
+  { name: 'Care International',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071089/care-social-image_z89urf.jpg' },
+  { name: 'Action Against Hunger',                           sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071485/images_wdlpx5.webp' },
+  { name: 'Management Sciences for Health',                  sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071758/481673405_955771040058965_3343411815597313821_n_adhcco.jpg' },
+  { name: 'Plan International',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071632/Plan_International_Logo.svg_sofp4e.png' },
+  { name: 'Achieving Health Nigeria Initiative (AHNi)',      sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779072337/images_udvbxx.jpg' },
 ];
 
 const SECTOR_COLOR = {
-  'Oil & Gas':          '#c0392b',
-  'Conglomerate':       '#8e44ad',
   'Intergovernmental':  '#1a6e3c',
   'International Body': '#1a5276',
   'Diplomatic Mission': '#784212',
   'NGO':                '#6c3483',
-  'Government':         'var(--royal)',
+  'Government':         '#1A3FBF',
+  'Oil & Gas':          '#c0392b',
+  'Conglomerate':       '#8e44ad',
   'Healthcare':         '#1a7a4a',
-  'Marine':             'var(--cyan)',
-  'Commercial':         'var(--navy)',
+  'Marine':             '#00AEEF',
+  'Commercial':         '#0D1E3D',
   'Industrial':         '#5d6d7e',
 };
 
@@ -37,7 +37,7 @@ export default function Clients() {
   return (
     <Layout
       title="Our Clients"
-      description="Organizations Fix-It Handyman Limited has worked for, including ECOWAS, EU Commission, IOM, NLNG, Honeywell, NGOs, embassies, and more."
+      description="Organizations Fix-It Handyman Limited has worked for, including ECOWAS, EU Commission, IOM, embassies, NGOs, and more."
     >
 
       {/* HERO */}
@@ -50,9 +50,8 @@ export default function Clients() {
           <p className="eyebrow">Our Track Record</p>
           <h1>Organizations We Have<br /><span>Worked For</span></h1>
           <p>
-            From intergovernmental bodies and diplomatic missions to oil and gas giants,
-            NGOs, and healthcare institutions, Fix-It Handyman Limited has delivered
-            across sectors and scales.
+            From intergovernmental bodies and diplomatic missions to government agencies
+            and NGOs, Fix-It Handyman Limited has delivered across sectors and scales.
           </p>
         </div>
       </section>
@@ -83,36 +82,29 @@ export default function Clients() {
             <p className="eyebrow">Our Clients</p>
             <h2 className="section-title">Trusted by <span>Leading Organizations</span></h2>
             <p className="section-sub">
-              A selection of the intergovernmental bodies, diplomatic missions, private companies,
-              and NGOs we have been proud to serve.
+              A selection of the intergovernmental bodies, diplomatic missions, government
+              agencies, and NGOs we have been proud to serve.
             </p>
           </div>
 
           <div className={s.grid}>
             {CLIENTS.map((c, i) => (
               <div key={i} className={s.card}>
-                {/* Logo / image area */}
                 <div className={s.logoWrap}>
                   <img src={c.img} alt={c.name} className={s.logoImg} />
-                  <div className={s.logoOverlay} />
                   <span
                     className={s.sector}
-                    style={{ background: SECTOR_COLOR[c.sector] || 'var(--navy)' }}
+                    style={{ background: SECTOR_COLOR[c.sector] || '#0D1E3D' }}
                   >
                     {c.sector}
                   </span>
                 </div>
-                {/* Name only — no project description */}
                 <div className={s.cardName}>
                   <p>{c.name}</p>
                 </div>
               </div>
             ))}
           </div>
-
-          <p className={s.note}>
-            * Placeholder images shown. Client logos will be updated shortly.
-          </p>
         </div>
       </section>
 
@@ -138,7 +130,7 @@ export default function Clients() {
               {[
                 { icon: '🤝', t: 'Long-Term Relationships', d: 'Many of our clients have engaged us across multiple projects over several years.' },
                 { icon: '📋', t: 'Framework Contracts',      d: 'We hold ongoing service agreements with several public and private sector organisations.' },
-                { icon: '🌍', t: 'Diverse Sectors',          d: 'Intergovernmental bodies, diplomatic missions, oil and gas, marine, healthcare, NGOs, and commercial.' },
+                { icon: '🌍', t: 'Diverse Sectors',          d: 'Intergovernmental bodies, diplomatic missions, government agencies, NGOs, and commercial.' },
               ].map(tr => (
                 <div key={tr.t} className={s.trustCard}>
                   <span>{tr.icon}</span>
