@@ -4,7 +4,7 @@ import s from './clients.module.css';
 
 const CLIENTS = [
   { name: 'ECOWAS Commission, Abuja',                        sector: 'Intergovernmental',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
-  { name: 'European Union Commission, Abuja',                sector: 'International Body', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
+  { name: 'European Union Commission, Abuja',                sector: 'International Body', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779073341/ec-logo-horiz_en_wijyfs.png' },
   { name: 'International Organization for Migration (IOM)',  sector: 'International Body', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
   { name: 'Netherlands Embassy in Nigeria',                  sector: 'Diplomatic Mission', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070467/599c8a2f336bb_cg8ypo.jpg' },
   { name: 'Norwegian Embassy in Nigeria',                    sector: 'Diplomatic Mission', img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069225/norveska-ambasada.jpg_tknwyi.webp' },
