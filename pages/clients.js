@@ -1,171 +1,108 @@
-import Layout from '../components/Layout';
-import Link from 'next/link';
-import s from './clients.module.css';
+.hero { position:relative; min-height:55vh; display:flex; align-items:flex-end; overflow:hidden; }
+.heroBg { position:absolute; inset:0; }
+.heroBg img { width:100%; height:100%; object-fit:cover; }
+.heroMask { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,15,30,0.97) 0%, rgba(13,30,61,0.70) 100%); }
+.heroContent { position:relative; z-index:2; padding:120px 0 60px; }
+.heroContent h1 { font-size:clamp(2.4rem,5vw,4.5rem); font-weight:900; text-transform:uppercase; color:var(--white); margin-bottom:14px; line-height:1; }
+.heroContent h1 span { color:var(--cyan); }
+.heroContent p { font-size:1.05rem; color:rgba(255,255,255,0.72); max-width:600px; line-height:1.7; }
 
-// Replace img with real Cloudinary logo URL for each client when ready.
-// For logo-only display, use a white/light background image or the actual logo PNG.
-const CLIENTS = [
-  { name: 'ECOWAS Commission, Abuja',          sector: 'Intergovernmental',          img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
-  { name: 'European Union Commission, Abuja',                                 sector: 'International Body',        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=60' },
-  { name: 'International Organization for Migration (IOM)',                                          sector: 'International Body',   img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069023/International_Organization_for_Migration_logo.svg_sky6nf.png' },
-  { name: 'Netherlands Embassy in Nigeria',                       sector: 'Diplomatic Mission',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070467/599c8a2f336bb_cg8ypo.jpg' },
-  { name: 'Norwegian Embassy in Nigeria', sector: 'Diplomatic Mission',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779069225/norveska-ambasada.jpg_tknwyi.webp' },
-  { name: 'Botswana Embassy in Nigeria',                                  sector: 'Diplomatic Mission',  img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070142/botswana-773x435_kekyhd.jpg' },
-  { name: 'Malaria Consortium',                                    sector: 'NGO',                 img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070318/Malaria-Consortium-Logo-no-strapline_xdemep.webp' },
-  { name: 'FHI 360',                                    sector: 'NGO',                 img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070675/fhi-360-logo.tmb-1920v_j5pcjp.webp' },
-  { name: 'Rural Electrification Agency',                             sector: 'Government',          img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070819/REA_GREEN_DAVID_guxegf.png' },
-  { name: 'Care International',                             sector: 'NGO',          img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071089/care-social-image_z89urf.jpg' },
-  { name: 'Action Against Hunger',                             sector: 'NGO',              img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071485/images_wdlpx5.webp' },
-  { name: 'Management Sciences for Health',                             sector: 'NGO',              img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071758/481673405_955771040058965_3343411815597313821_n_adhcco.jpg' },
-  { name: 'Plan International',                             sector: 'NGO',          img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071632/Plan_International_Logo.svg_sofp4e.png' },
-  { name: 'Achieving Health Nigeria Initiative (AHNi)',                             sector: 'NGO',          img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779072337/images_udvbxx.jpg' },
-];
+/* STATS STRIP */
+.strip { background:var(--dark); border-top:3px solid var(--red); }
+.stripGrid { display:grid; grid-template-columns:repeat(4,1fr); }
+.stripStat { padding:24px 20px; text-align:center; border-right:1px solid rgba(255,255,255,0.07); }
+.stripStat:last-child { border-right:none; }
+.stripStat strong { display:block; font-family:var(--font-head); font-size:2.4rem; font-weight:900; color:var(--cyan); line-height:1; }
+.stripStat span { font-size:0.78rem; color:rgba(255,255,255,0.5); letter-spacing:0.05em; }
 
-const SECTOR_COLOR = {
-  'Oil & Gas':          '#c0392b',
-  'Conglomerate':       '#8e44ad',
-  'Intergovernmental':  '#1a6e3c',
-  'International Body': '#1a5276',
-  'Diplomatic Mission': '#784212',
-  'NGO':                '#6c3483',
-  'Government':         'var(--royal)',
-  'Healthcare':         '#1a7a4a',
-  'Marine':             'var(--cyan)',
-  'Commercial':         'var(--navy)',
-  'Industrial':         '#5d6d7e',
-};
+/* CLIENTS GRID */
+.clientsSect { padding:100px 0; background:var(--off); }
+.sectionHead { margin-bottom:56px; }
 
-export default function Clients() {
-  return (
-    <Layout
-      title="Our Clients"
-      description="Organizations Fix-It Handyman Limited has worked for, including ECOWAS, EU Commission, IOM, NLNG, Honeywell, NGOs, embassies, and more."
-    >
-
-      {/* HERO */}
-      <section className={s.hero}>
-        <div className={s.heroBg}>
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80" alt="" />
-          <div className={s.heroMask} />
-        </div>
-        <div className={`container ${s.heroContent}`}>
-          <p className="eyebrow">Our Track Record</p>
-          <h1>Organizations We Have<br /><span>Worked For</span></h1>
-          <p>
-            From intergovernmental bodies and diplomatic missions to oil and gas giants,
-            NGOs, and healthcare institutions, Fix-It Handyman Limited has delivered
-            across sectors and scales.
-          </p>
-        </div>
-      </section>
-
-      {/* STATS STRIP */}
-      <section className={s.strip}>
-        <div className="container">
-          <div className={s.stripGrid}>
-            {[
-              { n: '200+', l: 'Projects Completed' },
-              { n: '50+',  l: 'Organizations Served' },
-              { n: '10+',  l: 'Industry Sectors' },
-              { n: '8+',   l: 'Years of Delivery' },
-            ].map(st => (
-              <div key={st.l} className={s.stripStat}>
-                <strong>{st.n}</strong>
-                <span>{st.l}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CLIENTS GRID */}
-      <section className={s.clientsSect}>
-        <div className="container">
-          <div className={s.sectionHead}>
-            <p className="eyebrow">Our Clients</p>
-            <h2 className="section-title">Trusted by <span>Leading Organizations</span></h2>
-            <p className="section-sub">
-              A selection of the intergovernmental bodies, diplomatic missions, private companies,
-              and NGOs we have been proud to serve.
-            </p>
-          </div>
-
-          <div className={s.grid}>
-            {CLIENTS.map((c, i) => (
-              <div key={i} className={s.card}>
-                {/* Logo / image area */}
-                <div className={s.logoWrap}>
-                  <img src={c.img} alt={c.name} className={s.logoImg} />
-                  <div className={s.logoOverlay} />
-                  <span
-                    className={s.sector}
-                    style={{ background: SECTOR_COLOR[c.sector] || 'var(--navy)' }}
-                  >
-                    {c.sector}
-                  </span>
-                </div>
-                {/* Name only — no project description */}
-                <div className={s.cardName}>
-                  <p>{c.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className={s.note}>
-            * Placeholder images shown. Client logos will be updated shortly.
-          </p>
-        </div>
-      </section>
-
-      {/* TRUST BAND */}
-      <section className={s.trustBand}>
-        <div className="container">
-          <div className={s.trustInner}>
-            <div className={s.trustText}>
-              <p className="eyebrow" style={{ color: 'var(--cyan)' }}>Why They Choose Us</p>
-              <h2 className="section-title" style={{ color: 'var(--white)' }}>
-                Delivering Results<br />
-                <span style={{ color: 'var(--red)' }}>Every Time</span>
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.65)', marginBottom: 28, lineHeight: 1.75 }}>
-                Our clients return to us because we deliver what we promise, on time,
-                within budget, and to international standards. From a single maintenance
-                call to a multi-year service contract, we treat every engagement with
-                the same commitment to excellence.
-              </p>
-              <Link href="/contact" className="btn btn-red">Work With Us</Link>
-            </div>
-            <div className={s.trustCards}>
-              {[
-                { icon: '🤝', t: 'Long-Term Relationships', d: 'Many of our clients have engaged us across multiple projects over several years.' },
-                { icon: '📋', t: 'Framework Contracts',      d: 'We hold ongoing service agreements with several public and private sector organisations.' },
-                { icon: '🌍', t: 'Diverse Sectors',          d: 'Intergovernmental bodies, diplomatic missions, oil and gas, marine, healthcare, NGOs, and commercial.' },
-              ].map(tr => (
-                <div key={tr.t} className={s.trustCard}>
-                  <span>{tr.icon}</span>
-                  <div>
-                    <strong>{tr.t}</strong>
-                    <p>{tr.d}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className={s.cta}>
-        <div className="container">
-          <h2>Ready to Join Our Client List?</h2>
-          <p>Contact our team to discuss your project and how we can help.</p>
-          <Link href="/contact" className="btn btn-red" style={{ marginTop: 28 }}>
-            Get in Touch
-          </Link>
-        </div>
-      </section>
-
-    </Layout>
-  );
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
+
+.card {
+  background: var(--white);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  box-shadow: var(--sh-sm);
+  border: 1px solid var(--light);
+  transition: all 0.28s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--sh-md); border-color: var(--cyan); }
+
+/* Logo area — white background, logo fits inside without cropping */
+.logoWrap {
+  position: relative;
+  height: 140px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--light);
+}
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* full logo visible, no cropping */
+  object-position: center;
+}
+/* Overlay only for the sector tag positioning */
+.logoOverlay { display: none; }
+
+.sector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-head);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 0 0 4px 0;
+}
+
+/* Name — clean and minimal */
+.cardName {
+  padding: 14px 16px;
+  background: var(--white);
+}
+.cardName p {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.note { margin-top:28px; font-size:0.78rem; color:var(--muted); font-style:italic; text-align:center; }
+
+/* TRUST BAND */
+.trustBand { padding:100px 0; background:linear-gradient(135deg, var(--dark) 0%, var(--navy) 100%); }
+.trustInner { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:start; }
+.trustCards { display:flex; flex-direction:column; gap:3px; }
+.trustCard { display:flex; gap:16px; padding:24px 20px; background:rgba(255,255,255,0.05); border-top:3px solid var(--cyan); transition:background 0.2s; }
+.trustCard:hover { background:rgba(255,255,255,0.08); }
+.trustCard span { font-size:1.8rem; flex-shrink:0; }
+.trustCard strong { display:block; font-family:var(--font-head); font-size:1rem; font-weight:800; text-transform:uppercase; color:var(--white); margin-bottom:5px; }
+.trustCard p { font-size:0.87rem; color:rgba(255,255,255,0.55); line-height:1.6; margin:0; }
+
+/* CTA */
+.cta { padding:80px 0; background:var(--red); text-align:center; }
+.cta h2 { font-family:var(--font-head); font-size:clamp(2rem,4vw,2.8rem); font-weight:900; text-transform:uppercase; color:var(--white); margin-bottom:12px; }
+.cta p { color:rgba(255,255,255,0.85); font-size:1.05rem; }
+
+@media(max-width:1024px) { .grid{grid-template-columns:repeat(3,1fr);} }
+@media(max-width:768px) { .grid{grid-template-columns:repeat(2,1fr);} .stripGrid{grid-template-columns:repeat(2,1fr);} .trustInner{grid-template-columns:1fr;} }
+@media(max-width:480px) { .grid{grid-template-columns:1fr;} }
