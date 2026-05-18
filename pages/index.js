@@ -230,8 +230,6 @@ export default function Home() {
               <h2 className="section-title">Organizations We Have <span>Worked For</span></h2>
               <p className="section-sub">Trusted by public institutions, private companies, and NGOs across Nigeria.</p>
             </div>
-            <Link href="/clients" className="btn btn-cyan">View All Clients</Link>
-          </div>
           <div className={s.clientsGrid}>
             {[
               { name:'ECOWAS Commission',                          sector:'Intergovernmental',  img:'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071948/ECOWAS_Signet_horizontal-1_ubjrg7.png' },
@@ -254,18 +252,6 @@ export default function Home() {
           </div>
           <div className={s.clientsFooter}>
             <Link href="/clients" className={s.clientsLink}>See all organizations we have worked for →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* PARTNERS */}
-      <section className={s.partnerSect}>
-        <div className="container">
-          <p className={s.partnerLabel}>Trusted OEM Partners and Associations</p>
-          <div className={s.partnerRow}>
-            {['Kongsberg', 'Teledyne', 'Trimble', 'Emerson', 'Fouani Group', 'Honeywell', '2M Kablo', 'COREN'].map(p => (
-              <div key={p} className={s.partnerTag}>{p}</div>
-            ))}
           </div>
         </div>
       </section>
