@@ -12,11 +12,18 @@ const CLIENTS = [
   { name: 'Malaria Consortium',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070318/Malaria-Consortium-Logo-no-strapline_xdemep.webp' },
   { name: 'FHI 360',                                         sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070675/fhi-360-logo.tmb-1920v_j5pcjp.webp' },
   { name: 'Rural Electrification Agency',                    sector: 'Government',         img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779070819/REA_GREEN_DAVID_guxegf.png' },
+  { name: ' Bank of Industry Limited',                    sector: 'Government',         img: 'https://www.boi.ng/wp-content/uploads/2024/10/BOI-Logo-sm.webp' },
   { name: 'Care International',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071089/care-social-image_z89urf.jpg' },
   { name: 'Action Against Hunger',                           sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071485/images_wdlpx5.webp' },
+  { name: 'SOLINA',                           sector: 'NGO',                img: 'https://i0.wp.com/scidar.org/wp-content/uploads/2021/02/cropped-Big_no-bg-1-1.png?w=952&ssl=1' },
   { name: 'Management Sciences for Health',                  sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071758/481673405_955771040058965_3343411815597313821_n_adhcco.jpg' },
   { name: 'Plan International',                              sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779071632/Plan_International_Logo.svg_sofp4e.png' },
   { name: 'Achieving Health Nigeria Initiative (AHNi)',      sector: 'NGO',                img: 'https://res.cloudinary.com/dbjahorp6/image/upload/v1779072337/images_udvbxx.jpg' },
+  { name: 'WaterAid Nigeria',                     sector: 'NGO', img: 'https://www.wateraid.org/themes/custom/wateraid/wateraid-social-logo.png' },
+  { name: 'International Committee of the Red Cross (ICRC)',                     sector: 'NGO', img: 'https://www.icrc.org/themes/custom/icrc_theme/html/images/logo/logo.svg' },
+  { name: 'Qatar Charity',                     sector: 'NGO', img: 'https://www.publicprocurement.ng/wp-content/uploads/2021/08/download-2.png' },
+  { name: 'Jhpiego',                     sector: 'NGO', img: 'https://www.ghtcoalition.org/images/member-logos/Jhpiego-new.png' },
+  { name: 'Heartland Alliance',                     sector: 'NGO', img: 'https://heartlandalliancenigeria.org/wp-content/uploads/2025/10/logo-1a.png' },
 ];
 
 const SECTOR_COLOR = {
