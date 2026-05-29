@@ -4,9 +4,9 @@ import s from './Footer.module.css';
 const LOGO = 'https://res.cloudinary.com/dbjahorp6/image/upload/v1778979476/FIX-IT_HANYMAN_u0w1ko.png';
 
 const COLS = [
-  { head: 'Company', links: [['/', 'Home'],['/about','About Us'],['/services','Services'],['/divisions','Our Divisions'],['/projects','Projects'],['/contact','Contact']] },
+  { head: 'Company', links: [['/', 'Home'],['/about','About Us'],['/services','Services'],['/divisions','Our Divisions'],['/clients','Our Clients'],['/projects','Projects'],['/contact','Contact']] },
   { head: 'Services', links: [['/services#engineering','Engineering & Contracting'],['/services#hydrographic','Hydrographic Services'],['/services#marine','Marine Survey'],['/services#handyman','Handyman Services'],['/services#medical','Medical Facilities'],['/services#it','IT Infrastructure'],['/services#procurement','Equipment Procurement']] },
-  { head: 'Divisions', links: [['/divisions#aircon','Fix-It Air Conditioner'],['/divisions#painters','Fix-It Painters'],['/divisions#safety','Fix-It Safety Services']] },
+  { head: 'Divisions', links: [['/divisions#aircon','Fix-It Air Conditioner'],['/divisions#electrical','Fix-It Electrical'],['/divisions#painters','Fix-It Painters'],['/divisions#safety','Fix-It Safety Services']] },
 ];
 
 export default function Footer() {
